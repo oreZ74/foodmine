@@ -1,0 +1,24 @@
+<ul>
+  <li *ngFor="let food of foods">
+    <a routerLink="/food/{{food.id}}">
+      <img [src]="food.imageUrl" [alt]="food.name"/>
+      <div class="content"> <!-- show the the details of the food -->
+        <div class="name">
+          {{food.name}}
+        </div>
+        <span class="favorite {{food.favorite?'':'not'}}">
+          ❤
+        </span>
+        <!-- <div class="stars">
+          <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
+          <div class="card">
+              <pre class="card-block card-header" style="margin:15px 0;">Rate: <b>{{rate}}</b> </pre>
+          </div>
+        </div> -->
+      </div>
+      </a>
+      <button type="button" class="btn btn-primary">
+        Single Button
+      </button>
+  </li>
+</ul>
